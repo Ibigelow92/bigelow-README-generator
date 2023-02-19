@@ -20,6 +20,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Please select which license you wish to use",
+        choices: ["MIT", "Apache 2.0", "GNU 3.0", "BSD 2.0", "BSD 3.0", "none"],
     },
     {
         type: "input",
@@ -37,8 +38,8 @@ const questions = [
         message: "Please input the relative path to any screenshots you wish to use",
     },
     {
-        type: "credits",
-        name: "description",
+        type: "input",
+        name: "credits",
         message: "Please list any collaborators, third-party assets used or tutorials followed",
     },
     {
@@ -56,13 +57,28 @@ const questions = [
         name: "tests",
         message: "Please explain how to test your project",
     },
-];
+    {
+        type: "input",
+        name: "creator",
+        message: "Write your GitHub username.",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Provide a valid email address.",
+    },
+  ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
 
 // Function call to initialize app
-init();
+function init() {
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating File...");
+      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    });
+  }
+  init();
