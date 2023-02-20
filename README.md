@@ -7,7 +7,11 @@ This project was designed for the purpose of simplifying the process of creating
 To use this application, clone the repo to your device.
 
 ## Usage
-To use the application, you must first clone the repo to your device. Open index.js in the integrated terminal. To run the application, enter "node index.js" into the terminal. This will bring up a series of prompts for you to create your file. After you have finished, your README file will appear as one of the files in the repo. 
+To use the application, you must first clone the repo to your device. Open index.js in the integrated terminal. 
+
+![image]C:\Users\iobbi\OneDrive\Desktop\ucd-bootcamp-desktop\README-gen-1.jpg
+
+To run the application, enter "node index.js" into the terminal. This will bring up a series of prompts for you to create your file. After you have finished, your README file will appear as one of the files in the repo. 
 
 ## Credits
 This YouTube video helped tremendously with the index.js file: https://www.youtube.com/watch?v=9YivEQFpmHQ. Tutor Jili Jiang helped me sync the index.js file with the generateMarkdown file. 
