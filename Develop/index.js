@@ -17,12 +17,6 @@ const questions = [
         message: "Please input your project description",
     },
     {
-        type: "checkbox",
-        name: "license",
-        message: "Please select which license you wish to use",
-        choices: ["MIT", "Apache 2.0", "GNU 3.0", "BSD 2.0", "BSD 3.0", "none"],
-    },
-    {
         type: "input",
         name: "installation",
         message: "Please explain how to install your project",
@@ -67,6 +61,12 @@ const questions = [
         name: "email",
         message: "Provide a valid email address.",
     },
+    {
+        type: "checkbox",
+        name: "license",
+        message: "Please select which license you wish to use",
+        choices: ["MIT", "Apache 2.0", "GNU 3.0", "BSD 2.0", "BSD 3.0", "none"],
+    },
   ];
 
 // TODO: Create a function to write README file
@@ -77,8 +77,9 @@ function writeToFile(fileName, data) {
 // Function call to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
+        console.log(responses)
       console.log("Creating File...");
-      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+     fs.writeFileSync(`${responses.title}.md`, generateMarkdown(responses));
     });
   }
   init();
