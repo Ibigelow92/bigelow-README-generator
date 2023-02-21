@@ -40,3 +40,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Tests
+After you have cloned the repo to your device, open index.js in the integrated terminal. Type "node index.js" to initialize the app in the terminal. The terminal should display a prompt asking you to enter your project title. When you input the title and press "enter", you should see what you inputted in cyan and the next prompt should appear below. The app should present you with several more input fields, one after the other. Each should behave more or less like the others. The license prompt is slightly different in that it is a checkbox. Use the up and down arrow keys to select a license and 
